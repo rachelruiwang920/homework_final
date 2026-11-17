@@ -1,0 +1,16 @@
+SOURCE_ID: taubench_2025
+KIND: verified_paper_record
+FIXTURE_ORIGIN: self_built_substitute
+TEACHER_FIXTURE: false
+TITLE: τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains
+AUTHORS: Shunyu Yao; Noah Shinn; Pedram Razavi; Karthik Narasimhan
+YEAR: 2025
+PREPRINT_YEAR: 2024
+VENUE: ICLR 2025
+ARXIV: https://arxiv.org/abs/2406.12045
+PRIMARY_URL: https://proceedings.iclr.cc/paper_files/paper/2025/file/1b126cc38b8638e07bef37e7b2bb72bf-Paper-Conference.pdf
+ACCESS_DATE: 2026-11-17
+NOTE: PDF 首頁聲明這是 ICLR 2025 會議論文，作者列為 Shunyu Yao、Noah Shinn、Pedram Razavi、Karthik Narasimhan。逐字的會議聲明行見下方 VERBATIM，不在這段說明裡重貼。arXiv 標題把 tau 放在數學模式。數字句引自空白正規化後的 arXiv 摘要。PDF 文字擷取把同一敘述拆成換行，並把 pass 後面的符號擷成修飾字母 ˆ，而且小於號與 50% 之間多了一個空格。兩份字串不相等，所以不合併成同一條引文。完整 PDF 未放進提交檔，SHA-256 記在 provenance/manifest.json。
+VERBATIM	taubench_venue_line	provenance/primary/extracts/taubench-p1.txt	Published as a conference paper at ICLR 2025
+VERBATIM	taubench_result	provenance/primary/extracts/arxiv-abstracts-normalized.txt	even state-of-the-art function calling agents (like gpt-4o) succeed on <50% of the tasks, and are quite inconsistent (pass^8 <25% in retail).
+PARAPHRASE: 【自撰轉述】這份評測把使用者、領域 API 與政策放進同一段對話，並用對話結束時的資料庫狀態對答案。pass^k 是摘要裡提出的可靠度指標。小於 50% 與 retail 上 pass^8 小於 25% 是 arXiv 摘要的實驗說法，不是本作業測量。引言裡的 Yao et al., 2022、Schick et al., 2023、Jimenez et al., 2023、Liu et al., 2023 只在已擷取頁面上以引用鍵出現，本次沒有擷取參考文獻表，所以不把它們畫成已經核到某一篇題名的引用邊。

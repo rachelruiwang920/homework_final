@@ -1,0 +1,17 @@
+SOURCE_ID: reflexion_2023
+KIND: verified_paper_record
+FIXTURE_ORIGIN: self_built_substitute
+TEACHER_FIXTURE: false
+TITLE: Reflexion: Language Agents with Verbal Reinforcement Learning
+AUTHORS_PROCEEDINGS: Noah Shinn; Federico Cassano; Ashwin Gopinath; Karthik Narasimhan; Shunyu Yao
+AUTHORS_ARXIV_V4: Noah Shinn; Federico Cassano; Edward Berman; Ashwin Gopinath; Karthik Narasimhan; Shunyu Yao
+YEAR: 2023
+VENUE: NeurIPS 2023
+DOI: 10.52202/075280-0377
+ARXIV: https://arxiv.org/abs/2303.11366
+PRIMARY_URL: https://proceedings.neurips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd888628510e90-Abstract-Conference.html
+ACCESS_DATE: 2026-11-17
+NOTE: 會議摘要頁是 5 位作者，沒有 Edward Berman。arXiv v4 API 多了 Edward Berman。會議 HTML 把 91% 留成 LaTeX 的 91\%。下面 HumanEval 那句改引自已正規空白的 arXiv 摘要，不把會議頁的反斜線命令改寫成排版後的句子。
+VERBATIM	reflexion_memory	provenance/primary/extracts/reflexion-neurips.txt	Reflexion agents verbally reflect on task feedback signals, then maintain their own reflective text in an episodic memory buffer to induce better decision-making in subsequent trials.
+VERBATIM	reflexion_humaneval	provenance/primary/extracts/arxiv-abstracts-normalized.txt	Reflexion achieves a 91% pass@1 accuracy on the HumanEval coding benchmark, surpassing the previous state-of-the-art GPT-4 that achieves 80%.
+PARAPHRASE: 【自撰轉述】語言回饋放在一次嘗試之後的情節記憶，用來影響下一輪，而不是在同一步裡呼叫外部 API。91% 與 80% 是 arXiv 摘要裡的 HumanEval 說法，不是本作業的測量。

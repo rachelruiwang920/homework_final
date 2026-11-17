@@ -1,0 +1,47 @@
+{
+  "schema_id": "self_built_tool_schema_v1",
+  "fixture_origin": "self_selected_per_user_instruction",
+  "source_selection": "使用者於 2026-11-17 指示自行選定相關論文摘錄，缺少教師來源包不構成阻斷。",
+  "teacher_schema": false,
+  "controller": {
+    "type": "deterministic_scripted_policy",
+    "llm": false,
+    "thought_origin": "scripted_template",
+    "loop": "Thought, Action, Observation，重覆到寫入或步數用盡或沒有候選"
+  },
+  "budget": {
+    "parameter": "max_steps",
+    "counts": "每次 search、read 或 write 各算 1。stop 不是工具呼叫，不計入。",
+    "compared_values": [3, 6],
+    "same_across_conditions": ["task-contract.json", "sourcepack", "tool-schema.json", "policy", "validator", "rubric"]
+  },
+  "tools": [
+    {
+      "name": "search",
+      "mechanism": "substring_phrase_v1",
+      "description": "對每份來源檔計算任務片語的整段子字串命中次數，再用長度至少 3 的英數 token 交集當平手鍵，最後用 source_id 字典序。不連網，不呼叫模型。",
+      "arguments": {"phrases": "字串陣列，來自任務契約"}
+    },
+    {
+      "name": "read",
+      "mechanism": "source_id_only",
+      "description": "只接受符合 ^[a-z][a-z0-9_]{0,63}$ 的來源代號。解析後的路徑必須留在 sourcepack/sources。回傳全文與 SHA-256。",
+      "arguments": {"source_id": "來源代號"}
+    },
+    {
+      "name": "write",
+      "mechanism": "assemble_from_verbatim_spans",
+      "description": "只有每個證據槽的錨點都已出現在讀取結果時才寫 final-brief.md。引文是來源檔裡恰好一條 VERBATIM 的原文，附 UTF-8 位元組區間與 SHA-256。自撰轉述另段標出，不充當引文。",
+      "arguments": {}
+    }
+  ],
+  "citation": {
+    "offset_unit": "utf-8 bytes",
+    "interval": "half-open [start, end)",
+    "hash": "sha256 of the exact bytes"
+  },
+  "security": [
+    "拒絕絕對路徑、.. 與連出來源根目錄的符號連結",
+    "write 只能寫出輸出目錄裡的 final-brief.md"
+  ]
+}

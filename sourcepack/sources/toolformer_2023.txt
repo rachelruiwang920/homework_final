@@ -1,0 +1,16 @@
+SOURCE_ID: toolformer_2023
+KIND: verified_paper_record
+FIXTURE_ORIGIN: self_built_substitute
+TEACHER_FIXTURE: false
+TITLE: Toolformer: Language Models Can Teach Themselves to Use Tools
+AUTHORS_PROCEEDINGS: Timo Schick; Jane Dwivedi-Yu; Roberto Dessi; Roberta Raileanu; Maria Lomeli; Eric Hambro; Luke Zettlemoyer; Nicola Cancedda; Thomas Scialom
+AUTHORS_ARXIV_V1: Timo Schick; Jane Dwivedi-Yu; Roberto Dessì; Roberta Raileanu; Maria Lomeli; Luke Zettlemoyer; Nicola Cancedda; Thomas Scialom
+YEAR: 2023
+VENUE: NeurIPS 2023
+DOI: 10.52202/075280-2997
+ARXIV: https://arxiv.org/abs/2302.04761
+PRIMARY_URL: https://proceedings.neurips.cc/paper_files/paper/2023/hash/d842425e4bf79ba039352da0f658a906-Abstract-Conference.html
+ACCESS_DATE: 2026-11-17
+NOTE: 會議摘要頁與 Crossref 都列出 9 位作者，含 Eric Hambro，Roberto 的姓氏在該頁寫成 Dessi。arXiv v1 API 是 8 位作者，沒有 Eric Hambro，且寫成 Dessì。此處會議名單以摘要頁為準，預印本差異如實保留，不把兩邊說成同一份名單。
+VERBATIM	toolformer_api	provenance/primary/extracts/toolformer-neurips.txt	a model trained to decide which APIs to call, when to call them, what arguments to pass, and how to best incorporate the results into future token prediction. This is done in a self-supervised way, requiring nothing more than a handful of demonstrations for each API.
+PARAPHRASE: 【自撰轉述】這份摘錄把工具使用放進訓練：模型決定呼叫哪個 API、何時呼叫、參數是什麼，以及如何把結果放進後面的 token 預測，並把做法稱為自監督。這和把行動留在推論時交錯軌跡裡的做法不是同一層。

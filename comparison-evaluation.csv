@@ -1,0 +1,3 @@
+condition,max_steps,completed,validator_pass,tool_calls,search_calls,read_calls,write_calls,slots_required,slots_observed,slots_cited,failure_reasons,brief_sha256,trajectory_sha256,unused_steps,rubric,teacher_validator
+max_steps_3,3,False,False,3,1,2,0,3,2,0,no_final_brief,,3bd4d293c5c78c58bbb3d0a40c71490d3cfe53e75f9b93799d11830a4d53e7e1,0,self_built_rubric_v1,False
+max_steps_6,6,True,True,5,1,3,1,3,3,3,,6c5327436ef0b68084171affee6052af85a2a2c3bfcba4aa7c31468077522e07,14ae63faf6c2b51f09e01fee1deee6fcb6070505b89753a2058095bf3a9f605f,1,self_built_rubric_v1,False

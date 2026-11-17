@@ -1,0 +1,42 @@
+{
+  "code_sha256": {
+    "__init__.py": "de2dbdaffd606fd452589b0fddd22f841d812cd1bdf29ff037e8600e3c42c373",
+    "loop.py": "3255c24282aa099e746c51c21b30b3e5c37fbe6dfaea9f2b170f98bc044c98c8",
+    "pack.py": "bdbe16e0c2517ebc9d70bc7d1420aa6f873b28c8edacf146c913113031e12c72",
+    "policy.py": "a4e2a3a33aad7d92fd21499bd25e8981ea6a9102c3b761995d7cc470ce092b85",
+    "security.py": "299e0d7804689262464baf8520a8570b6e79671108035f15bf03f94ba76fafd3",
+    "tools.py": "7d1e2b6430cb6aecde846e4a4594a3dbd2aba83687f023180840a0d2918f6419",
+    "validate.py": "29cd55f954c7091bccddd125e013bd2e120dea94dbe5f3efd4f3d054970d1778"
+  },
+  "command_note": "python3 scripts/run_experiment.py",
+  "condition": "max_steps_6",
+  "contract_sha256": "c8db4a72eeabc9a810c9a759da4168721de8e5a66434e8b5a540bde130864dbd",
+  "controller_type": "deterministic_scripted_policy",
+  "executed_at_utc": "2026-11-17T15:32:53Z",
+  "fixture_origin": "self_selected_per_user_instruction",
+  "grade_claimed": false,
+  "llm_used": false,
+  "max_steps": 6,
+  "model_output": false,
+  "offset_unit": "utf-8 bytes",
+  "package_version": "1.0.0",
+  "platform": "Linux-6.12.113+-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "source_selection": "使用者於 2026-11-17 指示以自行選定的相關論文摘錄作為來源，不把缺少教師來源包當成未完成事項。",
+  "source_sha256": {
+    "agentbench_2024.txt": "1148cff7f750cb18a12f2161e5643752c413112066c3a2d04de8b9e4d850ca67",
+    "note_distractor.txt": "37f56d01015c52c033983e5d9c21cc01de3d7c3973e2d86c70fa6747c412a803",
+    "react_2023.txt": "aa5a8bd4c74dbfcde5ec548c25679ffe175d0cb82e20edc40fb9c3bde47d91f2",
+    "reflexion_2023.txt": "e7596b5376ad331a6848bb40bd88eb684a3e2dcbd081f4084b775dbccf659d25",
+    "swebench_2024.txt": "8d4a9066abc21d380ecb0510fbef1d1205196d0a6d835a6aebcaedde5f0c7257",
+    "taubench_2025.txt": "5039fa9a71c455c9cab3ac61e93a5238816bf93b008250a3a60e70b951fbdd1a",
+    "toolformer_2023.txt": "cc952c883752641cc300dc23b04afa5cab18c9ab071e79b349055fcc680c6abe"
+  },
+  "stop_reason": "complete",
+  "teacher_approval_claimed": false,
+  "teacher_source_pack_attached": false,
+  "teacher_source_pack_blocking": false,
+  "teacher_validator_executed": false,
+  "tool_calls_executed": 5,
+  "tool_schema_sha256": "e49ec608827f3399d0c7422162101cfd244cda749021ca48c3b70071968612b2"
+}

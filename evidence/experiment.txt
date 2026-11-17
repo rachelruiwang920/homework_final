@@ -1,0 +1,4 @@
+max_steps_3 pass=False tools=3 search=1 read=2 write=0 observed=2 cited=0 unused=0 reasons=no_final_brief
+max_steps_6 pass=True tools=5 search=1 read=3 write=1 observed=3 cited=3 unused=1 reasons=
+已寫入 runs/max_steps_3/evaluation.csv 與 runs/max_steps_6/evaluation.csv
+完成條件已複製到 completed/ 與倉庫根目錄。這不是教師驗證器的結果。

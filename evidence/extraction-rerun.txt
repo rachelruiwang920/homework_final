@@ -1,0 +1,22 @@
+# 乾淨解壓後重跑
+
+2026-11-17。來源說明改成依使用者指示自行選定之後，把工作樹壓成 zip，解到 /tmp/at3-extract2，再執行。這個紀錄檔是跑完才寫的，所以不在被解壓的那一份 zip 裡。
+
+命令：
+
+```
+python3 -m unittest discover -s tests -q
+python3 scripts/check_excerpts.py
+python3 scripts/run_experiment.py
+```
+
+結果：19 項測試通過，耗時 0.038 秒。摘錄核對通過。實驗輸出是：
+
+```
+max_steps_3 pass=False tools=3 search=1 read=2 write=0 observed=2 cited=0 unused=0 reasons=no_final_brief
+max_steps_6 pass=True tools=5 search=1 read=3 write=1 observed=3 cited=3 unused=1 reasons=
+```
+
+與倉庫裡這次執行的 `final-brief.md`、`trajectory.jsonl`、`evaluation.csv`，以及 `runs/max_steps_3/trajectory.jsonl`、`runs/max_steps_6/final-brief.md` 位元組相同。
+
+PDF 頁數：批判摘要 1，分析 1，簡報排版稿 1。

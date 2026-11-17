@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="640" viewBox="0 0 1100 640">
+  <rect width="1100" height="640" fill="#f6f1e7"/>
+  <text x="40" y="42" font-family="WenQuanYi Micro Hei, Droid Sans Fallback, sans-serif" font-size="22" fill="#1c1917">自建知識圖譜：六篇論文裡的「行動」</text>
+  <text x="40" y="68" font-family="WenQuanYi Micro Hei, Droid Sans Fallback, sans-serif" font-size="13" fill="#44403c">實線是作者名單交集。虛線是本作業的機制對照，不是論文裡的引用邊。存取日 2026-11-17。</text>
+  <g fill="none" stroke="#44403c" stroke-width="1.6">
+    <path d="M250 180 C250 250, 550 250, 550 180"/>
+    <path d="M250 180 C250 300, 850 300, 850 180"/>
+    <path d="M550 180 C700 250, 780 250, 850 180"/>
+  </g>
+  <g fill="none" stroke="#9a3412" stroke-width="1.6" stroke-dasharray="6 5">
+    <path d="M250 150 C400 90, 500 90, 550 150"/>
+    <path d="M160 210 C160 360, 470 360, 470 250"/>
+    <path d="M630 250 C700 360, 780 360, 850 250"/>
+  </g>
+  <g font-family="WenQuanYi Micro Hei, Droid Sans Fallback, sans-serif">
+    <rect x="70" y="120" width="220" height="92" rx="8" fill="#fffdf8" stroke="#1c1917"/>
+    <text x="84" y="148" font-size="16" fill="#1c1917">ReAct</text>
+    <text x="84" y="170" font-size="12" fill="#44403c">ICLR 2023</text>
+    <text x="84" y="190" font-size="12" fill="#44403c">軌跡內交錯推理與行動</text>
+    <rect x="440" y="120" width="220" height="92" rx="8" fill="#fffdf8" stroke="#1c1917"/>
+    <text x="454" y="148" font-size="16" fill="#1c1917">Toolformer</text>
+    <text x="454" y="170" font-size="12" fill="#44403c">NeurIPS 2023</text>
+    <text x="454" y="190" font-size="12" fill="#44403c">訓練模型決定 API</text>
+    <rect x="810" y="120" width="220" height="92" rx="8" fill="#fffdf8" stroke="#1c1917"/>
+    <text x="824" y="148" font-size="16" fill="#1c1917">Reflexion</text>
+    <text x="824" y="170" font-size="12" fill="#44403c">NeurIPS 2023</text>
+    <text x="824" y="190" font-size="12" fill="#44403c">下一輪的語言記憶</text>
+    <rect x="70" y="390" width="220" height="92" rx="8" fill="#fffdf8" stroke="#1c1917"/>
+    <text x="84" y="418" font-size="16" fill="#1c1917">AgentBench</text>
+    <text x="84" y="440" font-size="12" fill="#44403c">ICLR 2024</text>
+    <text x="84" y="460" font-size="12" fill="#44403c">八個環境的代理評測</text>
+    <rect x="440" y="390" width="220" height="92" rx="8" fill="#fffdf8" stroke="#1c1917"/>
+    <text x="454" y="418" font-size="16" fill="#1c1917">SWE-bench</text>
+    <text x="454" y="440" font-size="12" fill="#44403c">ICLR 2024</text>
+    <text x="454" y="460" font-size="12" fill="#44403c">真實程式庫的 issue</text>
+    <rect x="810" y="390" width="220" height="92" rx="8" fill="#fffdf8" stroke="#1c1917"/>
+    <text x="824" y="418" font-size="16" fill="#1c1917">τ-bench</text>
+    <text x="824" y="440" font-size="12" fill="#44403c">ICLR 2025</text>
+    <text x="824" y="460" font-size="12" fill="#44403c">使用者、API 與政策</text>
+  </g>
+  <text x="40" y="530" font-family="WenQuanYi Micro Hei, Droid Sans Fallback, sans-serif" font-size="13" fill="#44403c">實線：Yao 與 Narasimhan 連接 ReAct、Reflexion、SWE-bench、τ-bench；Shinn 再連接 Reflexion 與 τ-bench。</text>
+  <text x="40" y="554" font-family="WenQuanYi Micro Hei, Droid Sans Fallback, sans-serif" font-size="13" fill="#9a3412">虛線：自撰對照。Toolformer 與 ReAct 的行動層不同；Reflexion 的時間尺度不同；三個評測彼此也只是歸類。</text>
+  <text x="40" y="578" font-family="WenQuanYi Micro Hei, Droid Sans Fallback, sans-serif" font-size="13" fill="#44403c">τ-bench 頁面上的 Yao et al., 2022 等引用鍵沒有連出去：參考文獻表本次沒有擷取。</text>
+  <text x="40" y="612" font-family="WenQuanYi Micro Hei, Droid Sans Fallback, sans-serif" font-size="12" fill="#78716c">自建圖，不是教師提供的圖譜。</text>
+</svg>

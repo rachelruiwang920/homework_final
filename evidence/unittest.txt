@@ -1,0 +1,23 @@
+test_committed_runs_match_a_fresh_execution (test_budget.BudgetTests.test_committed_runs_match_a_fresh_execution) ... ok
+test_controller_does_not_hardcode_budget_or_source_ids (test_budget.BudgetTests.test_controller_does_not_hardcode_budget_or_source_ids) ... ok
+test_each_anchor_is_in_exactly_one_source (test_budget.BudgetTests.test_each_anchor_is_in_exactly_one_source) ... ok
+test_excerpts_match_primary_files (test_budget.BudgetTests.test_excerpts_match_primary_files) ... ok
+test_rerun_is_identical_except_wall_clock (test_budget.BudgetTests.test_rerun_is_identical_except_wall_clock) ... ok
+test_same_contract_bytes_for_both_conditions (test_budget.BudgetTests.test_same_contract_bytes_for_both_conditions) ... ok
+test_search_ranks_three_anchor_documents_first (test_budget.BudgetTests.test_search_ranks_three_anchor_documents_first) ... ok
+test_short_budget_fails_and_long_budget_passes (test_budget.BudgetTests.test_short_budget_fails_and_long_budget_passes) ... ok
+test_analysis_contains_the_csv (test_reports.ReportTests.test_analysis_contains_the_csv) ... ok
+test_blockquotes_are_primary_substrings (test_reports.ReportTests.test_blockquotes_are_primary_substrings) ... ok
+test_read_rejects_path_like_ids (test_security_and_validator.SecurityTests.test_read_rejects_path_like_ids) ... ok
+test_symlink_escape_is_rejected (test_security_and_validator.SecurityTests.test_symlink_escape_is_rejected) ... ok
+test_anchor_in_prose_is_not_evidence (test_security_and_validator.ValidatorTests.test_anchor_in_prose_is_not_evidence) ... ok
+test_bad_span_and_bad_hash (test_security_and_validator.ValidatorTests.test_bad_span_and_bad_hash) ... ok
+test_good_brief_passes (test_security_and_validator.ValidatorTests.test_good_brief_passes) ... ok
+test_missing_brief_fails_run (test_security_and_validator.ValidatorTests.test_missing_brief_fails_run) ... ok
+test_missing_slot_and_path_source (test_security_and_validator.ValidatorTests.test_missing_slot_and_path_source) ... ok
+test_write_refuses_incomplete_evidence (test_security_and_validator.ValidatorTests.test_write_refuses_incomplete_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.033s
+
+OK

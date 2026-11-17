@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<style>
+@page { size: A4; margin: 12mm 14mm; }
+html, body {
+  font-family: "WenQuanYi Micro Hei", "Droid Sans Fallback", sans-serif;
+  font-size: 10pt;
+  line-height: 1.38;
+  color: #1c1917;
+}
+h1 { font-size: 14pt; line-height: 1.25; margin: 0 0 8px; font-weight: 600; }
+h2 { font-size: 11.5pt; margin: 8px 0 4px; font-weight: 600; }
+p { margin: 0 0 7px; }
+ul.urls { margin: 2px 0 0; padding-left: 1.1em; font-size: 8pt; line-height: 1.28; }
+li { margin: 0; word-break: break-all; }
+</style>
+</head>
+<body>
+<h1>步數上限 3 與 6：一次確定性對照</h1>
+<p>兩次執行共用同一份 `task/task-contract.json`、同一份來源包、同一支腳本政策、同一套自建驗證器。唯一改動是 `max_steps`。search 對整段錨點做子字串計數，長度至少 3 的英數 token 交集只用來打破平手，再以 `source_id` 排序。read 只收來源代號。write 只在三個錨點都已出現在讀取結果時，把對應 `VERBATIM` 行的 UTF-8 位元組區間寫進簡報。Thought 是程式裡的固定模板，軌跡裡標成 `thought_origin=scripted_template`、`llm=false`。沒有呼叫模型。</p>
+<p>執行時間是 2026-11-17T15:32:53Z，Python 3.12.3。這不是教師驗證器的結果。這次把來源說明改成依使用者指示自行選定，簡報標示句與引用的位元組起點因此改變。工具次數沒有變。更早的 14:35:54Z 與 14:30:55Z 是同一套步數結果、舊標示句的執行。</p>
+<p>上限 3：不通過。工具呼叫 3 次，其中 search 1、read 2、write 0。觀察到 2 個證據槽，引用 0 個。未使用步數 0。失敗代碼 `no_final_brief`。軌跡 SHA-256 是 `3bd4d293c5c78c58bbb3d0a40c71490d3cfe53e75f9b93799d11830a4d53e7e1`。</p>
+<p>上限 6：通過自建規則。工具呼叫 5 次，其中 search 1、read 3、write 1。觀察到 3 槽，引用 3 槽。未使用步數 1。沒有失敗代碼。簡報 SHA-256 是 `6c5327436ef0b68084171affee6052af85a2a2c3bfcba4aa7c31468077522e07`。軌跡 SHA-256 是 `14ae63faf6c2b51f09e01fee1deee6fcb6070505b89753a2058095bf3a9f605f`。</p>
+<p>兩次的檢索排序相同。`agentbench_2024` 與 `react_2023` 都是片語命中 1、token 交集 11，因代號字典序而由 AgentBench 先讀。`toolformer_2023` 是片語命中 1、交集 10。其餘四份片語命中都是 0。所以自然路徑是 search，接著讀這三份，然後 write，一共 5 次。這是這組錨點與這個排序公式算出來的，不是在程式裡寫死「3 就失敗、6 就成功」。</p>
+<p>最容易出錯的一步是 write 之前的第三次 read。上限 3 的第 1 步 search、第 2 步讀 `agentbench_2024`、第 3 步讀 `react_2023` 都已執行，步數就用盡。同一政策的下一步會讀 `toolformer_2023`，第三個錨點這時還沒進已讀文字，write 不會被呼叫。這一步沒有執行，只出現在 `runs/max_steps_3/error-note.md`，並標明 `executed: false`。`trajectory.jsonl` 裡沒有它，資料夾裡也沒有 `final-brief.md`。驗證器只看到缺少簡報，所以代碼是 `no_final_brief`。已讀到的兩段原文沒有被拿來充當引用。錯不在雜湊，而在第三次讀取還沒發生。</p>
+<p>上限 6 的前三步與失敗那次相同。第 4 步讀到 `toolformer_2023` 之後，三個錨點都在已讀文字裡，第 5 步才 write。驗證器重開來源檔，核對每條引文的位元組區間與 SHA-256，並確認錨點出現在引文裡而不是出現在【自撰轉述】。引用順序依任務契約，不依讀取順序：先 ReAct，再 Toolformer，再 AgentBench。上限還剩 1 次，政策隨即停止。`error-note.md` 寫明這不是失敗，檔名只是沿用要求。</p>
+<p>這組對照只說明：在這份自建來源包上，完成這張證據簡報需要 5 次工具呼叫，所以上限 3 不夠、上限 6 夠。它不說明語言模型在較長預算下會更好，也不是兩次獨立隨機試驗。另一次重跑時，簡報、軌跡、工具結果與評估表的位元組相同；會變的只有 `provenance.json` 裡的牆鐘時間。</p>
+<p>限制也很具體。查詢片語就是證據錨點，檢索不是開放域搜尋。控制器不會改口、不會試錯，也不是模型。來源是依使用者指示自行選定的論文摘錄；驗證器是自建的，所以不能說通過了教師的驗證器，也沒有教師認可。論文摘要裡的 34% 與 10%、1.96%、91% 與 80%，以及 pass^8 小於 25%，都不是這次跑出來的數字。下一步若要更有資訊，應該換一組不把答案片語放進查詢的問題，讓工具可以回傳空結果，並改用真正會抽樣的模型；那些都還沒做。</p>
+<p>路徑方面，read 拒絕帶有斜線或上層目錄的代號；來源目錄裡若有連出去的符號連結，載入時會拒絕。write 只能把 `final-brief.md` 寫進該次輸出目錄。</p>
+</body>
+</html>

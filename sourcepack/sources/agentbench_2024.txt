@@ -1,0 +1,16 @@
+SOURCE_ID: agentbench_2024
+KIND: verified_paper_record
+FIXTURE_ORIGIN: self_built_substitute
+TEACHER_FIXTURE: false
+TITLE: AgentBench: Evaluating LLMs as Agents
+AUTHORS: Xiao Liu; Hao Yu; Hanchen Zhang; Yifan Xu; Xuanyu Lei; Hanyu Lai; Yu Gu; Hangliang Ding; Kaiwen Men; Kejuan Yang; Shudan Zhang; Xiang Deng; Aohan Zeng; Zhengxiao Du; Chenhui Zhang; Sheng Shen; Tianjun Zhang; Yu Su; Huan Sun; Minlie Huang; Yuxiao Dong; Jie Tang
+YEAR: 2024
+VENUE: ICLR 2024
+ARXIV: https://arxiv.org/abs/2308.03688
+PRIMARY_URL: https://proceedings.iclr.cc/paper_files/paper/2024/hash/e9df36b21ff4ee211a8b71ee8b7e9f57-Abstract-Conference.html
+ACCESS_DATE: 2026-11-17
+NOTE: arXiv API 摘要把模型數量留成未展開的 LaTeX 巨集（反斜線接 num，另一處是反斜線接 textit）。29 這個數字只從 ICLR 摘要頁的文字擷取引用，不從那份未展開巨集的摘要補。arXiv 註記寫 Published in ICLR 2024。預印本日是 2023-08-07，會議年分記 2024。
+VERBATIM	agentbench_environments	provenance/primary/extracts/agentbench-iclr.txt	We present AgentBench, a multi-dimensional benchmark that consists of 8 distinct environments to assess LLM-as-Agent's reasoning and decision-making abilities.
+VERBATIM	agentbench_29	provenance/primary/extracts/agentbench-iclr.txt	Our extensive test over 29 API-based and open-sourced (OSS) LLMs shows that, while top commercial LLMs present a strong ability of acting as agents in complex environments, there is a significant disparity in performance between them and many OSS competitors that are no larger than 70B.
+VERBATIM	agentbench_failures	provenance/primary/extracts/agentbench-iclr.txt	poor long-term reasoning, decision-making, and instruction following abilities are the main obstacles for developing usable LLM agents.
+PARAPHRASE: 【自撰轉述】這份工作把代理放進 8 個互動環境裡做評測。29 與 70B 是摘要頁上的規模說法，不是本作業跑出來的。失敗原因在摘錄裡被歸到長期推理、決策與指令遵循。

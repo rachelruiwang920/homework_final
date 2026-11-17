@@ -1,0 +1,107 @@
+{
+  "access_date": "2026-11-17",
+  "label": "SELF_BUILT_BIBLIOGRAPHY_CACHE",
+  "teacher_source_pack": false,
+  "teacher_source_pack_blocking": false,
+  "source_selection": "使用者於 2026-11-17 指示自行選定相關論文摘錄，缺少教師來源包不構成阻斷。",
+  "files": [
+    {
+      "path": "provenance/primary/agentbench-abstract.html",
+      "bytes": 10609,
+      "sha256": "2ac30e3f9492282d9b345850ec45620ec4a77e437fc747c6c69d8afced7773c3"
+    },
+    {
+      "path": "provenance/primary/arxiv-api.xml",
+      "bytes": 15978,
+      "sha256": "8399497e84b6716f99741b8115a0f930ca8edbe778e02310fc1216a9e4c11c48"
+    },
+    {
+      "path": "provenance/primary/crossref/reflexion.json",
+      "bytes": 165295,
+      "sha256": "f589ecfe1c7181f0de9856c0a7d274297def81fac01f9d868902ac233614362f"
+    },
+    {
+      "path": "provenance/primary/crossref/toolformer.json",
+      "bytes": 21553,
+      "sha256": "e641234d35992c33e58ac40bd3ef7a4cf8494c32ab244427a8ce7e4d274a9686"
+    },
+    {
+      "path": "provenance/primary/extracts/agentbench-iclr.txt",
+      "bytes": 2213,
+      "sha256": "e5b9bb486c94e89d0eb9c2cb6926bec8bcd9abb943e263b81a706a9db26da7ab"
+    },
+    {
+      "path": "provenance/primary/extracts/arxiv-abstracts-normalized.txt",
+      "bytes": 8038,
+      "sha256": "aff0937b0a5801291dc19803ce597d057fd5d6606769c9507993c63ea8af1028"
+    },
+    {
+      "path": "provenance/primary/extracts/react-ar5iv-windows.txt",
+      "bytes": 362,
+      "sha256": "86abe3cbe6a18c31440fb655ce6769903ea2c83479f7199283627ab51c368063"
+    },
+    {
+      "path": "provenance/primary/extracts/react-iclr-oral.txt",
+      "bytes": 3120,
+      "sha256": "6cc56ccab3c2fcf17d5ef548da00a40fb01b6b0860e5f6dfa6b3d394d7711541"
+    },
+    {
+      "path": "provenance/primary/extracts/reflexion-neurips.txt",
+      "bytes": 2330,
+      "sha256": "9bc5f50f2a9097dd273c6aaa0f066b3481e60877c72d0038a7a9260578cc9593"
+    },
+    {
+      "path": "provenance/primary/extracts/swebench-iclr.txt",
+      "bytes": 2214,
+      "sha256": "4b655e926f86df901854dfa7bd4a85d2aa56239838410e4bd6d4cbeca35fa5f9"
+    },
+    {
+      "path": "provenance/primary/extracts/taubench-p1.txt",
+      "bytes": 8212,
+      "sha256": "16ccc2b3a1cd24bcd687469e58427b38dc095f3c90f8f9f1e1b0a28b4e03b7bc"
+    },
+    {
+      "path": "provenance/primary/extracts/toolformer-neurips.txt",
+      "bytes": 2004,
+      "sha256": "5181889bcf0c42200a8bc5997bd6480aeeeb4273dca0dc83113a05e945ccc136"
+    },
+    {
+      "path": "provenance/primary/react-iclr-oral.html",
+      "bytes": 84146,
+      "sha256": "ed4878ef9210e6a6d5a123709456a58e922ca28729f993f8da643b670855a0ab"
+    },
+    {
+      "path": "provenance/primary/reflexion-abstract.html",
+      "bytes": 9836,
+      "sha256": "bc98559ad2f7670a27e27350a77c3ffe15fe8f0728676a9fecfc82ae72a6fbde"
+    },
+    {
+      "path": "provenance/primary/swebench-abstract.html",
+      "bytes": 9820,
+      "sha256": "43dd58a8f7c5a086ba43b6131aea03c54af2877579f863b396d9d5e7d4159f12"
+    },
+    {
+      "path": "provenance/primary/toolformer-abstract.html",
+      "bytes": 9944,
+      "sha256": "fb6dee917e49369926b002da0d13990d95d1567698b29f5e519c58e2e1eec5ca"
+    }
+  ],
+  "downloads_not_committed": [
+    {
+      "note": "下載後只保留 SHA-256 與首頁文字擷取，未把整份 PDF 放進提交檔，以避免再散布全文。",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/1b126cc38b8638e07bef37e7b2bb72bf-Paper-Conference.pdf",
+      "sha256": "e2d45d573e1fce753ead1a44cc468ad386dd384e2668450d0a9c0e2c7920ada0",
+      "bytes": 519645,
+      "access_date": "2026-11-17",
+      "committed_extract": "provenance/primary/extracts/taubench-p1.txt"
+    },
+    {
+      "note": "ar5iv HTML 全文未入庫。下面兩個視窗是從該 HTML 轉出的文字裡原樣切下的。",
+      "url": "https://ar5iv.labs.arxiv.org/html/2210.03629",
+      "sha256": "60f6a1c954fb6338b55deb1ee1405a95704aadf306155701cd4efe83f6def475",
+      "bytes": 518974,
+      "access_date": "2026-11-17",
+      "committed_extract": "provenance/primary/extracts/react-ar5iv-windows.txt"
+    }
+  ]
+}

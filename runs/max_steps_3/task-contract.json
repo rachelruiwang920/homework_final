@@ -1,0 +1,39 @@
+{
+  "task_id": "react-evidence-brief-v1",
+  "fixture_origin": "self_selected_per_user_instruction",
+  "source_selection": "使用者於 2026-11-17 指示自行選定相關論文摘錄，缺少教師來源包不構成阻斷。",
+  "teacher_source_pack": false,
+  "teacher_source_pack_blocking": false,
+  "teacher_validator": false,
+  "rubric_id": "self_built_rubric_v1",
+  "question": "交錯式工具迴圈、訓練期自學 API、以及多環境代理評測，分別把「行動」放在什麼位置？答案只能用來源包裡的逐字摘錄支撐。",
+  "search_phrases": [
+    "reasoning traces and task-specific actions in an interleaved manner",
+    "decide which APIs to call, when to call them, what arguments to pass",
+    "8 distinct environments to assess LLM-as-Agent's reasoning and decision-making abilities"
+  ],
+  "required_slots": [
+    {
+      "slot_id": "react_interleave",
+      "anchor": "reasoning traces and task-specific actions in an interleaved manner",
+      "purpose_zh": "推理與行動在同一條推論軌跡裡交錯，行動用來接觸外部來源。"
+    },
+    {
+      "slot_id": "toolformer_api",
+      "anchor": "decide which APIs to call, when to call them, what arguments to pass",
+      "purpose_zh": "工具呼叫發生在訓練後的 token 預測裡，由模型決定 API、時機與參數。"
+    },
+    {
+      "slot_id": "agentbench_environments",
+      "anchor": "8 distinct environments to assess LLM-as-Agent's reasoning and decision-making abilities",
+      "purpose_zh": "評測把代理行動放進多個互動環境，而不是只看單次文字答案。"
+    }
+  ],
+  "paraphrase_templates": {
+    "react_interleave": "這條摘錄把推理痕跡和任務行動放在同一次生成裡交錯產生，並把行動說成接觸外部來源的介面。這描述的是論文中的語言模型做法，不是本作業這個離線腳本。",
+    "toolformer_api": "這條摘錄說的是一個經過訓練的模型，要自己決定呼叫哪一個 API、何時呼叫、傳什麼參數，以及如何把結果放進後續的 token 預測。摘錄把這個過程稱為自監督。它和上一槽把推理與行動留在同一條推論軌跡裡，不在同一層。",
+    "agentbench_environments": "這條摘錄把評測對象寫成互動環境中的語言模型代理，並寫明規模是 8 個環境。它評的是代理能力，不是本作業這個確定性腳本。"
+  },
+  "design_note": "這段說明只給人讀，執行器的政策函式不讀它。自然完成路徑是 1 次 search、然後依排序讀到三個錨點都出現、再 1 次 write。以目前來源包，三個錨點分別只存在於三份檔案，而且檢索會把它們排在前面，所以完成需要 5 次工具呼叫。max_steps=3 因此會在第三次讀取與寫入之前停住。這是這個任務的步數算術，不是模型優劣，也不是統計試驗。",
+  "natural_tool_calls_if_ranking_holds": 5
+}

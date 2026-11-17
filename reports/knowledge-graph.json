@@ -1,0 +1,71 @@
+{
+  "label": "自建知識圖譜",
+  "teacher_graph": false,
+  "access_date": "2026-11-17",
+  "how_to_read": "shared_author 只表示會議頁或 arXiv API 的作者名單有交集。analytical_contrast 是本作業的機制對照，不是論文自己畫的引用邊。",
+  "nodes": [
+    {"id": "react_2023", "title": "ReAct", "venue": "ICLR 2023", "role": "推論時交錯推理與行動"},
+    {"id": "toolformer_2023", "title": "Toolformer", "venue": "NeurIPS 2023", "role": "訓練模型決定 API 呼叫"},
+    {"id": "reflexion_2023", "title": "Reflexion", "venue": "NeurIPS 2023", "role": "試次之間的語言反思"},
+    {"id": "agentbench_2024", "title": "AgentBench", "venue": "ICLR 2024", "role": "多環境代理評測"},
+    {"id": "swebench_2024", "title": "SWE-bench", "venue": "ICLR 2024", "role": "真實程式庫 issue 評測"},
+    {"id": "taubench_2025", "title": "τ-bench", "venue": "ICLR 2025", "role": "使用者、工具與政策的對話評測"}
+  ],
+  "edges": [
+    {
+      "source": "react_2023",
+      "target": "reflexion_2023",
+      "type": "shared_author",
+      "authors": ["Shunyu Yao", "Karthik Narasimhan"],
+      "evidence": "ICLR 口頭報告頁與 NeurIPS Reflexion 摘要頁的作者名單"
+    },
+    {
+      "source": "react_2023",
+      "target": "swebench_2024",
+      "type": "shared_author",
+      "authors": ["Shunyu Yao", "Karthik Narasimhan"],
+      "evidence": "ICLR 口頭報告頁與 ICLR 2024 SWE-bench 摘要頁的作者名單"
+    },
+    {
+      "source": "react_2023",
+      "target": "taubench_2025",
+      "type": "shared_author",
+      "authors": ["Shunyu Yao", "Karthik Narasimhan"],
+      "evidence": "ICLR 口頭報告頁與 ICLR 2025 PDF 首頁作者列"
+    },
+    {
+      "source": "reflexion_2023",
+      "target": "taubench_2025",
+      "type": "shared_author",
+      "authors": ["Noah Shinn", "Shunyu Yao", "Karthik Narasimhan"],
+      "evidence": "NeurIPS Reflexion 摘要頁與 ICLR 2025 PDF 首頁作者列"
+    },
+    {
+      "source": "react_2023",
+      "target": "toolformer_2023",
+      "type": "analytical_contrast",
+      "note": "自撰對照：一邊把行動留在推論軌跡，一邊把 API 決策訓練進後續 token。不是引用邊。"
+    },
+    {
+      "source": "react_2023",
+      "target": "reflexion_2023",
+      "type": "analytical_contrast",
+      "note": "自撰對照：一邊在同一條軌跡裡交替，一邊把語言回饋放到下一輪的情節記憶。不是引用邊。"
+    },
+    {
+      "source": "agentbench_2024",
+      "target": "swebench_2024",
+      "type": "analytical_contrast",
+      "note": "自撰歸類：兩者都是 ICLR 2024 的代理或軟體工程評測，評的對象不同。"
+    },
+    {
+      "source": "swebench_2024",
+      "target": "taubench_2025",
+      "type": "analytical_contrast",
+      "note": "自撰歸類：都把完成定義成環境裡可檢查的結果，τ-bench 另加使用者與政策。"
+    }
+  ],
+  "explicitly_not_edges": [
+    "τ-bench PDF 前兩頁出現 Yao et al., 2022、Schick et al., 2023、Jimenez et al., 2023、Liu et al., 2023 等引用鍵。本次沒有擷取該 PDF 的參考文獻表，所以這些鍵不連到 ReAct、Toolformer、SWE-bench 或 AgentBench。"
+  ]
+}

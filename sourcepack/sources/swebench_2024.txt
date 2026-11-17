@@ -1,0 +1,18 @@
+SOURCE_ID: swebench_2024
+KIND: verified_paper_record
+FIXTURE_ORIGIN: self_built_substitute
+TEACHER_FIXTURE: false
+TITLE_PROCEEDINGS: SWE-bench: Can Language Models Resolve Real-world Github Issues?
+TITLE_ARXIV: SWE-bench: Can Language Models Resolve Real-World GitHub Issues?
+AUTHORS_PROCEEDINGS: Carlos E Jimenez; John Yang; Alexander Wettig; Shunyu Yao; Kexin Pei; Ofir Press; Karthik Narasimhan
+AUTHORS_ARXIV: Carlos E. Jimenez; John Yang; Alexander Wettig; Shunyu Yao; Kexin Pei; Ofir Press; Karthik Narasimhan
+YEAR: 2024
+VENUE: ICLR 2024
+ARXIV: https://arxiv.org/abs/2310.06770
+PRIMARY_URL: https://proceedings.iclr.cc/paper_files/paper/2024/hash/edac78c3e300629acfe6cbe9ca88fb84-Abstract-Conference.html
+OPENREVIEW_URL_FROM_ARXIV_COMMENT: https://openreview.net/forum?id=VTF8yNQM66
+ACCESS_DATE: 2026-11-17
+NOTE: 會議頁題名用 Real-world Github，arXiv 題名用 Real-World GitHub。作者名在會議頁是 Carlos E Jimenez，arXiv 是 Carlos E. Jimenez。arXiv 註記寫 ICLR 2024 並列出 OpenReview 網址；本次沒有通過 OpenReview 的驗證頁，所以不把該頁內文當已核對正文。1.96% 這句引自會議摘要頁。arXiv 摘要把同一數字包在數學模式 $1.96$% 裡。
+VERBATIM	swebench_scale	provenance/primary/extracts/swebench-iclr.txt	we introduce SWE-bench, an evaluation framework consisting of 2,294 software engineering problems drawn from real GitHub issues and corresponding pull requests across 12 popular Python repositories.
+VERBATIM	swebench_claude	provenance/primary/extracts/swebench-iclr.txt	The best-performing model, Claude 2, is able to solve a mere 1.96% of the issues.
+PARAPHRASE: 【自撰轉述】評測單位是真實程式庫的 issue，模型要改程式碼。2,294、12 與 1.96% 都是摘要頁上的數字，不是本作業測量。行動在這裡是對程式庫的編輯，而不是本作業的離線讀檔。

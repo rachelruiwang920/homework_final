@@ -1,0 +1,12 @@
+SOURCE_ID: note_distractor
+KIND: self_written_distractor
+FIXTURE_ORIGIN: self_built_substitute
+TEACHER_FIXTURE: false
+TITLE: 自撰檢索干擾筆記
+AUTHORS: 本作業
+YEAR: 2026
+VENUE: 不是論文
+ACCESS_DATE: 2026-11-17
+NOTE: 這份檔案是自撰的檢索干擾項，用來讓排序不只面對六篇論文。它不是論文，沒有逐字摘錄，也不能被當成文獻引用。
+PARAPHRASE: 【自撰轉述】代理、工具、搜尋、讀取、寫入、評測、推理這些詞會在英文 token 裡留下 search、agent、tool、benchmark 的零星重疊，但本檔故意不收錄任務契約裡的整段錨點，因此片語命中應為 0。
+BODY: offline search agent tool benchmark read write

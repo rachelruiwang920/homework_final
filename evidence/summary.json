@@ -1,0 +1,40 @@
+[
+  {
+    "condition": "max_steps_3",
+    "max_steps": 3,
+    "completed": false,
+    "validator_pass": false,
+    "tool_calls": 3,
+    "search_calls": 1,
+    "read_calls": 2,
+    "write_calls": 0,
+    "slots_required": 3,
+    "slots_observed": 2,
+    "slots_cited": 0,
+    "failure_reasons": "no_final_brief",
+    "brief_sha256": "",
+    "trajectory_sha256": "3bd4d293c5c78c58bbb3d0a40c71490d3cfe53e75f9b93799d11830a4d53e7e1",
+    "unused_steps": 0,
+    "rubric": "self_built_rubric_v1",
+    "teacher_validator": false
+  },
+  {
+    "condition": "max_steps_6",
+    "max_steps": 6,
+    "completed": true,
+    "validator_pass": true,
+    "tool_calls": 5,
+    "search_calls": 1,
+    "read_calls": 3,
+    "write_calls": 1,
+    "slots_required": 3,
+    "slots_observed": 3,
+    "slots_cited": 3,
+    "failure_reasons": "",
+    "brief_sha256": "6c5327436ef0b68084171affee6052af85a2a2c3bfcba4aa7c31468077522e07",
+    "trajectory_sha256": "14ae63faf6c2b51f09e01fee1deee6fcb6070505b89753a2058095bf3a9f605f",
+    "unused_steps": 1,
+    "rubric": "self_built_rubric_v1",
+    "teacher_validator": false
+  }
+]
